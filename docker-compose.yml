@@ -1,0 +1,11 @@
+﻿services:
+  ms-sql-server:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Dedicated407"
+      MSSQL_PID: Express
+    ports:
+      - "1433:1433"
+    volumes:
+      - ~/apps/mssql/data:/var/lib/mssqlql/data  
